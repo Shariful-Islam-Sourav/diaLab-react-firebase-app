@@ -11,7 +11,7 @@ const Services = () => {
   }, []);
   const slicedServices = services.slice(0, 6);
   return (
-    <Container className="my-5">
+    <Container className="my-5" id="services">
       <h2 className="text-center mb-4 dark-blue">Services</h2>
       <Row xs={1} md={2} lg={3} className="g-4">
         {slicedServices.map((service) => (

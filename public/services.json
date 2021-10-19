@@ -3,6 +3,7 @@
         "id": 1,
         "name": "Computed Tomography (CT) Scan",
         "cost": 79,
+        "duration": "4 Hours",
         "description": "Medical professionals use computed tomography, also known as CT scan, to examine structures inside your body. A CT scan uses X-rays and computers to produce images of a cross-section of your body. It takes pictures that show very thin “slices” of your bones, muscles, organs and blood vessels so that healthcare providers can see your body in great detail.",
         "img": "https://i.ibb.co/RCH8x0c/ctscan-1.jpg"
     },
@@ -10,6 +11,7 @@
         "id": 2,
         "name": "Chest X-ray",
         "cost": 99,
+        "duration": "6 Hours",
         "description": "A chest X-ray uses a focused beam of radiation to look at your heart, lungs and bones. Healthcare providers use chest X-rays to diagnose or treat conditions like pneumonia, emphysema or COPD. Chest X-rays are quick, noninvasive tests. Usually, you will know the results of your X-ray within one to two days.",
         "img": "https://i.ibb.co/Q6k8Rz3/chestxray-1.jpg"
     },
@@ -17,6 +19,7 @@
         "id": 3,
         "name": "Upper Endoscopy",
         "cost": 65,
+        "duration": "9 Hours",
         "description": "An upper endoscopy is a procedure a doctor uses to look at the inner lining of the upper digestive tract (the esophagus, stomach, and duodenum, which is the first part of the small intestine). This test is also sometimes called an esophagogastroduodenoscopy, or EGD.",
         "img": "https://i.ibb.co/bF5vrYy/upperendoscopy-1.jpg"
     },
@@ -24,6 +27,7 @@
         "id": 4,
         "name": "Magnetic Resonance Imaging (MRI)",
         "cost": 110,
+        "duration": "10 Hours",
         "description": "MRI uses a magnetic field, radio waves, and a computer to produce detailed images of the inside of your body. For the test, you will lie on a table that slides into a cylinder-shaped tube. Similar to computed tomography, you may be given a dye (contrast agent) for the test. MRIs are typically better than x-rays.",
         "img": "https://i.ibb.co/wrjg6vm/mri-1.jpg"
     },
@@ -31,6 +35,7 @@
         "id": 5,
         "name": "Pulse Oximetry",
         "cost": 10,
+        "duration": "1 Hours",
         "description": "During pulse oximetry, a small device is painlessly clipped onto part of your body (often your fingertip or ear lobe) and measures the oxygen level in your blood. The pulse oximeter may be left on briefly for a single reading, or you may need to wear it for a longer period of time.",
         "img": "https://i.ibb.co/q0PGxXb/pulseoximetry-1.jpg"
     },
@@ -38,6 +43,7 @@
         "id": 6,
         "name": "Esophageal pH Monitoring",
         "cost": 50,
+        "duration": "2 Hours",
         "description": "Esophageal pH monitoring measures how often, and for how long, stomach acid enters your esophagus. A tube is used to insert a small probe through your nostril and into the lower part of your esophagus. The probe is attached to a small monitor that you will wear on your belt.",
         "img": "https://i.ibb.co/L1wvbMR/phmonitor-1.jpg"
     },
@@ -45,6 +51,7 @@
         "id": 7,
         "name": "Positron Emission Tomography (PET) Scan",
         "cost": 79,
+        "duration": "4 Hours",
         "description": "For a PET scan, you will be given a radioactive drug (radiotracer) that will collect in areas of your body that have high levels of chemical activity, such as disease areas. Unlike computed tomography (CT) scans and magnetic resonance imaging, which show important anatomic information.",
         "img": "https://i.ibb.co/cbV1P5C/petscan-1.jpg"
     }
