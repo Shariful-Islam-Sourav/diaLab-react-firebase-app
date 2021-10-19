@@ -1,11 +1,11 @@
 import React from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hook/useFirebase';
+import UseAuth from '../../context/useAuth';
 import './Register.css'
 
 const Register = () => {
-    const {signInUsingGoogle} = useFirebase();
+    const {signInUsingGoogle} = UseAuth();
     return (
         <Container className="py-5 login-container">
       <Row xs={1} md={2} className="g-4 d-flex align-items-center justify-content-center h-100">
