@@ -6,6 +6,7 @@ import './Register.css'
 
 const Register = () => {
     const {signInUsingGoogle} = UseAuth();
+   
     return (
         <Container className="py-5 login-container">
       <Row xs={1} md={2} className="g-4 d-flex align-items-center justify-content-center h-100">
