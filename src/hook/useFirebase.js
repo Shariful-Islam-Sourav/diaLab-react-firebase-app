@@ -37,7 +37,7 @@ const signOutUser = () => {
         setUser(user);
       }
     });
-  }, []);
+  }, [auth]);
   return {
       user,
       error,
