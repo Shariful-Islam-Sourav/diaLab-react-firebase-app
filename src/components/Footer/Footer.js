@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row, Stack } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 const Footer = () => {
   return (
@@ -16,14 +16,14 @@ const Footer = () => {
           <Col>
             <h4 className="mb-4">Our Location</h4>
             <p>
-              <i class="fas fa-map-marker-alt dark-blue me-2"></i> 16/A Mark
+              <i className="fas fa-map-marker-alt dark-blue me-2"></i> 16/A Mark
               Street, CA 2200
             </p>
             <p>
-              <i class="fas fa-phone dark-blue me-2"></i> +(200)345-0845
+              <i className="fas fa-phone dark-blue me-2"></i> +(200)345-0845
             </p>
             <p>
-              <i class="fas fa-envelope dark-blue me-2"></i> support@dialab.com
+              <i className="fas fa-envelope dark-blue me-2"></i> support@dialab.com
             </p>
           </Col>
           <Col>
@@ -35,7 +35,7 @@ const Footer = () => {
             />
           </Col>
         </Row>
-        <div class="text-center">
+        <div className="text-center">
         <small className="text-center">&copy; All rights reserved. Shariful Islam Sourav 2021</small>
         </div>
       </Container>
