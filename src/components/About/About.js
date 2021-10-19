@@ -1,12 +1,13 @@
 import React from "react";
 import { Col, Container, Row, Stack } from "react-bootstrap";
+import './About.css'
 
 const About = () => {
   return (
     <div className="bg-light my-5 py-5">
       <Container className="text-center">
         <h2 className="dark-blue">Our Pathology Laboratory</h2>
-        <p className="w-md-50 mx-auto">
+        <p className="w-50 mx-auto about-intro">
           PathologyLab has proved its quality services in field of Laboratory
           medicine. we always focusing on quality testing, maximum customer
           benefits & committed to provide end result.
@@ -51,32 +52,32 @@ const About = () => {
           <Col className="border border-primary p-4 text-md-start">
             <h4 className="mb-3">Office Hours</h4>
             <div className="d-flex justify-content-between">
-              <h5>Saturday:</h5>
-              <h5>06:00 AM - 10:00 PM</h5>
+              <h6>Saturday:</h6>
+              <h6>06:00 AM - 10:00 PM</h6>
             </div>
             <div className="d-flex justify-content-between">
-              <h5>Sunday:</h5>
-              <h5>06:00 AM - 10:00 PM</h5>
+              <h6>Sunday:</h6>
+              <h6>06:00 AM - 10:00 PM</h6>
             </div>
             <div className="d-flex justify-content-between">
-              <h5>Mondady:</h5>
-              <h5>06:00 AM - 10:00 PM</h5>
+              <h6>Mondady:</h6>
+              <h6>06:00 AM - 10:00 PM</h6>
             </div>
             <div className="d-flex justify-content-between">
-              <h5>Tuesday:</h5>
-              <h5>06:00 AM - 10:00 PM</h5>
+              <h6>Tuesday:</h6>
+              <h6>06:00 AM - 10:00 PM</h6>
             </div>
             <div className="d-flex justify-content-between">
-              <h5>Wednesday:</h5>
-              <h5>10:00 AM - 07:00 PM</h5>
+              <h6>Wednesday:</h6>
+              <h6>10:00 AM - 07:00 PM</h6>
             </div>
             <div className="d-flex justify-content-between">
-              <h5>Thursday:</h5>
-              <h5>06:00 AM - 10:00 PM</h5>
+              <h6>Thursday:</h6>
+              <h6>06:00 AM - 10:00 PM</h6>
             </div>
             <div className="d-flex justify-content-between">
-              <h5>Friday:</h5>
-              <h5>Closed</h5>
+              <h6>Friday:</h6>
+              <h6>Closed</h6>
             </div>
             <small className="text-danger">
               *This is our office hours, but our hospital is open 24 Hours for
