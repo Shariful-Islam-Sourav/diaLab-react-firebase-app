@@ -1,8 +1,12 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
+import useFirebase from "../../hook/useFirebase";
 import "./Header.css";
 
 const Header = () => {
+  const {user, signOutUser} = useFirebase();
   return (
     <Navbar bg="light" expand="lg" className="sticky-top shadow-sm">
       <Container>
@@ -20,14 +24,21 @@ const Header = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/home#services">Services</Nav.Link>
-            <Nav.Link href="#">Sign Up</Nav.Link>
+            <Nav.Link as={HashLink} to="/home#home">
+              Home
+            </Nav.Link>
+            <Nav.Link as={HashLink} to="/home#services">
+              Services
+            </Nav.Link>
+            <Nav.Link as={Link} to="/login">
+              Log In
+            </Nav.Link>
           </Nav>
-          <div className="d-flex">
-            <p>Signed as, </p>
-            <p>Mark Otto</p>
-          </div>
+          
+          <i className="fas fa-user me-2"></i>
+            <small className="me-2">{user?.displayName}</small>
+            {user.email && <Button onClick={signOutUser}>Logout</Button>}
+         
         </Navbar.Collapse>
       </Container>
     </Navbar>

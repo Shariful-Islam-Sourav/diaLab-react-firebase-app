@@ -6,10 +6,14 @@ import Home from "./components/Home/Home";
 import NotFound from "./components/NotFound/NotFound";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
+import AuthProvider from "./context/AuthProvider";
 
 function App() {
   return (
     <div>
+      <AuthProvider>
       <Router>
         <Header></Header>
         <Switch>
@@ -18,6 +22,12 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Home></Home>
+          </Route>
+          <Route exact path="/login">
+            <Login></Login>
+          </Route>
+          <Route exact path="/register">
+            <Register></Register>
           </Route>
           <Route exact path="/service/:serviceId">
             <ServiceDetails></ServiceDetails>
@@ -28,6 +38,7 @@ function App() {
         </Switch>
         <Footer></Footer>
       </Router>
+      </AuthProvider>
     </div>
   );
 }
