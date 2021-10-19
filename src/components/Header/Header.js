@@ -4,7 +4,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" className="sticky-top shadow-sm">
       <Container>
         <Navbar.Brand className="d-flex align-items-center fw-bold">
           <img
