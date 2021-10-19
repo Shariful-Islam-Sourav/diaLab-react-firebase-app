@@ -9,6 +9,8 @@ import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import AuthProvider from "./context/AuthProvider";
+import Appoinment from "./components/Appoinment/Appoinment";
+import Gallery from "./components/Gallery/Gallery";
 
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Home></Home>
+          </Route>
+          <Route exact path="/appoinment">
+            <Appoinment></Appoinment>
+          </Route>
+          <Route exact path="/gallery">
+            <Gallery></Gallery>
           </Route>
           <Route exact path="/login">
             <Login></Login>

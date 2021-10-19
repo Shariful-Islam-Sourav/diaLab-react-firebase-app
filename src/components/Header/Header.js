@@ -30,6 +30,12 @@ const Header = () => {
             <Nav.Link as={HashLink} to="/home#services">
               Services
             </Nav.Link>
+            <Nav.Link as={Link} to="/appoinment">
+              Book Appoinment
+            </Nav.Link>
+            <Nav.Link as={Link} to="/gallery">
+              Gallery
+            </Nav.Link>
             <Nav.Link as={Link} to="/login">
               Log In
             </Nav.Link>
