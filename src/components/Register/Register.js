@@ -21,7 +21,7 @@ const Register = () => {
     }
     const handleSubmit= (e) => {
       e.preventDefault();
-      signInNewUser(email,password);
+      signInNewUser(email,password,name);
     }
     return (
         <Container className="py-5 login-container">

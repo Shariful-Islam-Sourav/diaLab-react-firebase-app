@@ -8,6 +8,7 @@ import {
   onAuthStateChanged,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 
 FirebaseInitialize();
@@ -32,11 +33,20 @@ const useFirebase = () => {
       });
   };
   //Register New user
-  const signInNewUser = (email, password) => {
+  const signInNewUser = (email, password, name) => {
     createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // const user = userCredential.user;
+    window.location.reload();
     setError('');
+    updateProfile(auth.currentUser,{displayName: name})
+    .then(() => {
+      // Profile updated!
+      // ...
+    }).catch((error) => {
+      // An error occurred
+      // ...
+    });
   })
   .catch((error) => {
     const errorMessage = error.message;
@@ -56,6 +66,7 @@ const useFirebase = () => {
     setError(errorMessage);
   });
   }
+
   //User Sign-Out
   const signOutUser = () => {
     setIsLoading(true);
