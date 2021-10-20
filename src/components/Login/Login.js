@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Button, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import UseAuth from "../../context/useAuth";
 import './Login.css'
 
 const Login = () => {
-    const {signInUsingGoogle} = UseAuth();
+    const {signInUsingGoogle, loginWithEmailPassword, error} = UseAuth();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    //Handle inputs
+    const handleEmail = e => {
+      setEmail(e.target.value);
+    }
+    const handlePassword = e => {
+      setPassword(e.target.value);
+    }
+    const handleSubmit =(e) => {
+      e.preventDefault();
+      loginWithEmailPassword(email, password);
+    }
   return (
     <Container className="py-5 login-container">
       <Row xs={1} md={2} className="g-4 d-flex align-items-center justify-content-center h-100">
@@ -18,16 +31,17 @@ const Login = () => {
         </Col>
         <Col>
             <h2 className="mb-3">Please Login</h2>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="form-outline mb-2">
-              <input type="email" className="form-control form-control-lg" required/>   
+              <input onBlur={handleEmail} type="email" className="form-control form-control-lg" required/>   
               <label className="form-label">Email address</label>
             </div>
 
             <div className="form-outline mb-2">
-              <input type="password" className="form-control form-control-lg" required/>
+              <input onBlur={handlePassword} type="password" className="form-control form-control-lg" required/>
               <label className="form-label">Password</label>
             </div>
+            <p className="text-danger">{error}</p>
             <button type="submit" className="btn btn-primary btn-lg btn-block">
               Sign in
             </button>

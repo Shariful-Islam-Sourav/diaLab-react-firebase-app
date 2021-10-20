@@ -1,4 +1,6 @@
 # Dia Lab Medical Pathology React APP
+## Live Link
+https://dia-lab.web.app/
 
 ### Stack Used
 - React

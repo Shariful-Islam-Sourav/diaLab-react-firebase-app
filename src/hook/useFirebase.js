@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import FirebaseInitialize from "../Firebase/Firebase.init";
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  signOut,
+  onAuthStateChanged,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 FirebaseInitialize();
 const useFirebase = () => {
@@ -23,9 +31,34 @@ const useFirebase = () => {
         setError(errorMessage);
       });
   };
+  //Register New user
+  const signInNewUser = (email, password) => {
+    createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // const user = userCredential.user;
+    setError('');
+  })
+  .catch((error) => {
+    const errorMessage = error.message;
+    setError(errorMessage);
+  });
+  }
+  //Login With email and password
+  const loginWithEmailPassword = (email, password) => {
+  signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    // const user = userCredential.user;
+    setError('');
+  })
+  .catch((error) => {
+    const errorMessage = error.message;
+    setError(errorMessage);
+  });
+  }
   //User Sign-Out
-const signOutUser = () => {
-  setIsLoading(true);
+  const signOutUser = () => {
+    setIsLoading(true);
     signOut(auth)
       .then(() => {
         setUser({});
@@ -41,18 +74,20 @@ const signOutUser = () => {
       if (user) {
         setUser(user);
       } else {
-        setUser({})
+        setUser({});
       }
       setIsLoading(false);
     });
   }, [auth]);
   return {
-      user,
-      error,
-      isLoading,
-      signInUsingGoogle,
-      signOutUser
-  }
+    user,
+    error,
+    isLoading,
+    signInUsingGoogle,
+    signInNewUser,
+    loginWithEmailPassword,
+    signOutUser,
+  };
 };
 
 export default useFirebase;
