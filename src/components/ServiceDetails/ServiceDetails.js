@@ -17,9 +17,11 @@ const ServiceDetails = () => {
   return (
     <div>
       {service?.name === undefined ? (
-        <Spinner animation="border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
+        <div className="spinner-circle">
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+        </div>
       ) : (
         <Container className="my-5 service-section">
           <Row xs={1} md={2} className="g-4">
@@ -36,7 +38,9 @@ const ServiceDetails = () => {
               </h5>
               <p>{service.description}</p>
               <p>Call for Booking :</p>
-              <h5 className="d-inline text-white rounded-3 py-2 px-3 bg-primary"><i className="fas fa-headset"></i> +(200)345-0845</h5>
+              <h5 className="d-inline text-white rounded-3 py-2 px-3 bg-primary">
+                <i className="fas fa-headset"></i> +(200)345-0845
+              </h5>
             </Col>
           </Row>
         </Container>

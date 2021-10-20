@@ -10,3 +10,10 @@
 .btn-hover:hover {
   background-color: rgb(168, 208, 243);
 }
+
+.spinner-circle {
+  height: calc(100vh - 400px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

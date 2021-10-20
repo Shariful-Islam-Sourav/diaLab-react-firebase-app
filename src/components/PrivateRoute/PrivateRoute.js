@@ -1,11 +1,21 @@
-import React from 'react';
-import { Redirect, Route } from 'react-router';
-import UseAuth from '../../context/useAuth';
+import React from "react";
+import { Spinner } from "react-bootstrap";
+import { Redirect, Route } from "react-router";
+import UseAuth from "../../context/useAuth";
 
-const PrivateRoute = ({children, ...rest}) => {
-    const {user} = UseAuth()
+const PrivateRoute = ({ children, ...rest }) => {
+  const { user, isLoading } = UseAuth();
+  if (isLoading) {
     return (
-        <Route
+      <div className="text-center spinner-circle">
+        <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </Spinner>
+      </div>
+    );
+  }
+  return (
+    <Route
       {...rest}
       render={({ location }) =>
         user.email ? (
@@ -14,13 +24,13 @@ const PrivateRoute = ({children, ...rest}) => {
           <Redirect
             to={{
               pathname: "/login",
-              state: { from: location }
+              state: { from: location },
             }}
           />
         )
       }
     />
-    );
+  );
 };
 
 export default PrivateRoute;
