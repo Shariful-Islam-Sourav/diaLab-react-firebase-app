@@ -1,4 +1,5 @@
 # Dia Lab Medical Pathology React APP
+React-Firebase application for a pathology medical hospital with various features.
 ## Live Link
 https://dia-lab.web.app/
 
@@ -9,7 +10,7 @@ https://dia-lab.web.app/
 - Firebase Authentication
 
 ### What we can do? 
-* It's an react application for a pathology medical hospital. <br>
+* It's a react application for a pathology medical hospital. <br>
 * There routes such as Services, About, Home, Gallery, Appoinment etc. <br>
 * User can register or login using Email & GOOGLE ID. Firebase was used to do so. <br>
 * User can access some routes only after singing into the web app. <br>

@@ -35,37 +35,39 @@ const useFirebase = () => {
   //Register New user
   const signInNewUser = (email, password, name) => {
     createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // const user = userCredential.user;
-    window.location.reload();
-    setError('');
-    updateProfile(auth.currentUser,{displayName: name})
-    .then(() => {
-      // Profile updated!
-      // ...
-    }).catch((error) => {
-      // An error occurred
-      // ...
-    });
-  })
-  .catch((error) => {
-    const errorMessage = error.message;
-    setError(errorMessage);
-  });
-  }
+      .then((userCredential) => {
+        // const user = userCredential.user;
+        window.location.reload();
+        setError("");
+        //Update User Name
+        updateProfile(auth.currentUser, { displayName: name })
+          .then(() => {
+            // Profile updated!
+            // ...
+          })
+          .catch((error) => {
+            // An error occurred
+            // ...
+          });
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        setError(errorMessage);
+      });
+  };
   //Login With email and password
   const loginWithEmailPassword = (email, password) => {
-  signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    // const user = userCredential.user;
-    setError('');
-  })
-  .catch((error) => {
-    const errorMessage = error.message;
-    setError(errorMessage);
-  });
-  }
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        // const user = userCredential.user;
+        setError("");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        setError(errorMessage);
+      });
+  };
 
   //User Sign-Out
   const signOutUser = () => {

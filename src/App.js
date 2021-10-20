@@ -17,36 +17,36 @@ function App() {
   return (
     <div>
       <AuthProvider>
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route exact path="/home">
-            <Home></Home>
-          </Route>
-          <PrivateRoute exact path="/appoinment">
-            <Appoinment></Appoinment>
-          </PrivateRoute>
-          <PrivateRoute exact path="/gallery">
-            <Gallery></Gallery>
-          </PrivateRoute>
-          <Route exact path="/login">
-            <Login></Login>
-          </Route>
-          <Route exact path="/register">
-            <Register></Register>
-          </Route>
-          <PrivateRoute exact path="/service/:serviceId">
-            <ServiceDetails></ServiceDetails>
-          </PrivateRoute>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route exact path="/home">
+              <Home></Home>
+            </Route>
+            <PrivateRoute exact path="/appoinment">
+              <Appoinment></Appoinment>
+            </PrivateRoute>
+            <PrivateRoute exact path="/gallery">
+              <Gallery></Gallery>
+            </PrivateRoute>
+            <Route exact path="/login">
+              <Login></Login>
+            </Route>
+            <Route exact path="/register">
+              <Register></Register>
+            </Route>
+            <PrivateRoute exact path="/service/:serviceId">
+              <ServiceDetails></ServiceDetails>
+            </PrivateRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
       </AuthProvider>
     </div>
   );
